@@ -1,0 +1,33 @@
+/*
+논리연산자 ||(OR), &&(AND), !(NOT)
+ ||(OR) - 모든 값이 false일때만 false를 반환
+ &&(AND) - 모든값이 true면 true 즉 하나라도 false면 false를 반환
+ !(NOT) - true면 false / false면 true
+*/
+
+// (1) 이름이 TOM 이거나, 성인이면 통과
+// const name = "Mike";
+// const age = 30;
+
+// if(name === 'TOM' || age > 19){
+//   console.log('통과');
+// }
+
+// (2) 나이를 입력받아 성인이 아니면 돌아가 나오도록
+
+// const age = prompt('나이를 입력하세요..');
+// const isAdult = age > 19;
+// if(!isAdult){
+//   console.log('돌아가..');
+// }
+
+// (3) 우선순위 => 남자이고, 이름이 Mike이거나 성인이면 통과
+// const gender = 'F';
+// const name = 'Jane';
+// const isAdult = true;
+
+// if(gender==='M' && (name === 'Mike' || isAdult)){
+//   console.log('통과');
+// } else {
+//   console.log('돌아가..');
+// }
