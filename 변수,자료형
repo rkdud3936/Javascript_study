@@ -1,0 +1,74 @@
+/*
+변수
+-let const
+ let : 중복되면 에러로 알려줌
+ const: 절대로 바뀌지 않는상수
+ 자바스크립트에서 변수를 선언할떄는, 변하지 않는 값은 const, 변할 수 있는 값은 let으로 선언
+  1. 변수는 문자와 숫자, $와 _만 사용
+  2. 첫글자는 숫자가 될 수 없다
+  3. 예약어는 사용할 수 없다
+  4. 가급적 상수는 대문자로 알려주기
+  5. 변수명은 읽기 쉽고 이해할 수 있게 선언
+*/
+
+const name = "Mike";
+const age = 30;
+
+const name1 = "Mike";
+const name2 = 'Mike';
+const name3 = `Mike`;
+
+const message = "I'm a boy.";
+const message2 = 'I\'m a boy.';
+
+const message3 = `My name is ${name}`;
+
+console.log(message3);
+
+const message4 = `나는 ${age+1}살 입니다.`;
+
+console.log(message4);
+
+const PI = 3.14;
+
+console.log(1 + 2); // 더하기
+console.log(10 - 3); // 빼기
+console.log(3 * 2); // 곱하기
+console.log(6 / 3); // 나누기
+console.log(6 % 4); // 나머지
+
+const x = 1/0;
+console.log(x); // Infinity 무한대
+
+// 문자열/숫자 => NaN (Not a Number) 숫자가 아님
+const y = name/2;
+console.log(y);
+
+//Boolean
+const a = true; // 참
+const b = false; // 거짓
+
+console.log(name == 'Mike');
+console.log(age > 40);
+
+// null과 undefined
+// undefIned - 변수를 선언만 하고 아무것도 할당하지 않았을때
+// null 
+let user = null; // user는 존재하지않는다는 의미로 보면 됨
+
+//typeof 연산자
+console.log(typeof 3); // 숫자형
+console.log(typeof name); // 문자형
+console.log(typeof true); //boolean형
+console.log(typeof "xxx"); // 문자형
+console.log(typeof null); // object 
+console.log(typeof undefined); // undefined 
+
+// 문자형 더하기 사용가능
+const c = "나는 ";
+const d = " 입니다.";
+
+console.log(c + name + d);
+
+//숫자형 문자형 섞어서 더할수도 있음 -> 문자형으로 변경됨
+console.log(c + age +"살"+ d);
