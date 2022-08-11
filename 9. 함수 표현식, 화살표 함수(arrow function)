@@ -1,0 +1,45 @@
+/*
+함수 선언문 vs 함수 표현식
+-함수 선언문: 어디서든 호출 가능
+-함수 표현식: 코드에 도달하면 생성
+*/ 
+
+/*
+화살표 함수(arrow function)
+
+1.
+let add = function(num1, num2){
+  return num1 + num2;
+}
+
+이걸 화살표 함수로 바꾸면
+
+let add = (num1, num2) => num1, num2;
+
+2. 
+let sayHello = (name) => `Hello, ${name}`;
+
+3. 
+let showError = () => {
+  alert('error!');  
+}
+
+4.
+let add = (num1, num2) => {
+  const result = num1 + num2;
+  return result;
+}
+*/
+
+/*
+ex1)
+const sayHello = function (name){
+  const msg = `Hello, ${name}`;
+  console.log(msg);
+}
+화살표함수로 
+const sayHello = (name) => {
+  const msg = `Hello, ${name}`;
+  console.log(msg);
+}
+*/
