@@ -1,0 +1,33 @@
+/* 
+-var는 한번 선언된 변수를 다시 선언할 수 있다.
+ let은 안됨
+ var name = 'Mike';
+console.log(name); // Mike
+
+var name = 'Jane';
+console.log(name); // Jane
+
+-var는 선언하기 전에 사용할 수 있다. but 값은 X
+var name;
+console.log(name); // undefined
+name = 'Mike';
+
+-호이스팅:
+ 스코프 내부 어디서든 변수 선언은 최상위에 선언된 것 처럼 행동
+ let과 const도 var와 같이 호이스팅됨 But, Error
+ let과 const는 TDZ(Temporal Dead Zone)의 영향을 받음. 
+
+-변수의 생성과정
+ 1. 선언 단계
+ 2. 초기화 단계
+ 3. 할당 단계
+  > var 
+    1. 선언 및 초기화 단계  (초기화: undefined를 할당 해주는 단계)
+    2. 할당 단계    
+  > let
+    1. 선언 단계
+    2. 초기화 단계
+    3. 할당 단계  
+  > const 
+    1. 선언 + 초기화 + 할당 
+ */
