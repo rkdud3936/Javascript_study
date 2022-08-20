@@ -1,0 +1,48 @@
+/*
+[객체 메소드(Object methods),
+계산된 프로퍼티(Computed property)]
+
+- Computed property
+(1)
+let a = 'age';
+
+const user = {
+    name : 'Mike',
+    [a] : 30 // age:30 
+}
+
+-Methods
+(1) Object.assign() : 객체 복제
+const user = {
+    name : 'Mike',
+    age : 30
+}
+
+const newUser = Object.assign({}, user);
+const newUser1 = Object.assign({ gender:'male' }, user); //gender, name, age 나옴
+
+(2)Object.keys() : 키 배열 반환
+const user = {
+    name : 'Mike',
+    age : 30,
+    gender:'male'
+}
+Object.keys(user);  // ["name","age","gender"]
+
+(3)Object.values() : 값 배열 반환
+Object.values(user); // ["Mike",30,"male"]
+
+(4)Object.entries() : 키/값 배열 반환
+Object.entries(user); // [["name","Mike"],["age",30],["gender","male"]]
+
+(5)Object.fromEntries() : 키/값 배열을 객체로
+const arr = 
+[
+    ["name","Mike"],
+    ["age",30],
+    ["gender","male"]
+]
+Object.fromEntries(arr); // { name : 'Mike', age: 30, gender: 'male',}
+
+
+*/
