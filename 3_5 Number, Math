@@ -1,0 +1,71 @@
+/*
+Number, Math
+
+-toString() : 10진수 -> 2진수/16진수
+let num = 10;
+num.toString(); // "10"
+num.toString(2); // "1010"
+
+let num2 = 255;
+num2.toString(16); //"ff"
+
+-Math
+(1) Math.ceil() : 올림
+(2) Math.floor() : 내림
+(3) Math.round() : 반올림
+let num1 = 5.1;
+Math.ceil(num1); // 6
+Math.floor(num1); // 5
+Math.round(num1); // 5
+
+(4-1) 소수점 자릿수
+let userRate = 30.1234;
+요구사항: 소수점 둘째자리 까지 표현(셋째 자리에서 반올림)
+Math.round(userRate * 100) / 100 // 30.12
+(4-2) 소수점 자릿수 : toFixed() -> 문자열반환 -> Number 이용해 숫자변환 가능 
+let userRate = 30.1234;
+요구사항: 소수점 둘째자리 까지 표현(셋째 자리에서 반올림)
+userRate.toFixed(2); // "30.12"
+userRate.toFixed(0); // "30"
+userRate.toFixed(6); // "30.123400"
+
+(5)isNaN() : NaN인지 아닌지
+Not a Number
+let x = Number('x'); //NaN
+x == NaN //false
+x === NaN //false
+NaN == NaN //false
+isNaN(x) // true
+isNaN(3) // false 
+
+(6)parseInt: 문자열을 숫자로 바꿔줌
+let margin = '10px';
+parseInt(margin); // 10
+Number(margin); //NaN
+
+let redColor = 'f3'; // 숫자로 시작해야 숫자로 바꿔줌
+parseInt(redColor); // NaN 
+parseInt(redColor, 16); //16진수 // 243
+parseInt('11',2); //2진수-> 10진수 // 3
+
+(7)paseFloat()
+let padding = '18.5%';
+parseInt(padding); // 18
+parseFloat(padding); // 18.5
+
+(8)Math.random(): 0~1 사이 무작위 숫자 생성
+1~100사이 임의의 숫자를 뽑고 싶다면?
+Math.floor(Math.random()*100)+1
+
+(9) Math.max()/Math.min()
+Math.max(1,4,-1,5,10,-,5.54); //10
+Math.min(1,4,-1,5,10,-,5.54); //-1
+
+(10) Math.abs(): 절대값
+(11) Math.pow(n,m): 제곱
+Math.max(2, 10); // 1024
+(12)Math.sqrt(): 제곱근
+Math.max(16); // 4
+
+
+*/
