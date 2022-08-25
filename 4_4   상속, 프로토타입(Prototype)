@@ -1,0 +1,58 @@
+/*
+상속, 프로토타입(Prototype)
+-상속
+const car = {
+    wheels: 4,
+    drive(){
+        console.log("drive..");
+    },
+};
+
+const bmw = {
+    color: "red",
+    navigation: 1,
+};
+
+const benz = {
+    color: "black",
+};
+
+const audi = {
+    color: "blue",
+};
+
+bmw._proto_ = car;
+benz._proto_ = car;
+audi._proto_ = car;
+
+const x5 = {
+    color: "white",
+    name: "x5",
+}
+
+x5._proto_ = bmw;
+
+생성자 상속
+//const car = {
+//    wheels: 4,
+//    drive(){
+//        console.log("drive..");
+//    },
+//};
+
+const Bmw = function(color){
+    this.color = color;
+};
+
+Bmw.prototype.wheels = 4;
+Bmw.prototype.drive = function(){
+    console.log("drive...");
+};
+
+const x5 = new Bmw("red");
+const z4 = new Bmw("red");
+
+//x5._proto_ = car;
+//z4._proto_ = car;
+
+*/
