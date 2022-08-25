@@ -1,0 +1,91 @@
+/*
+프로미스(Promise)
+
+-callback
+const pr = new Promise((resolve, reject)=> {
+    //code
+});
+
+*
+const pr = new Promise((resolve, reject)=> {
+    setTimeout(()=>{
+        resolve('OK')
+    }, 3000)
+});
+
+pr.then(
+    function(result){}, // 이행되었을떄 실행
+    function(err){} // 거부되었을때 실행
+);
+ -> 위에코드 catch로 하는게 더 좋음
+pr.then(
+    function(result){},
+).catch(
+    function(err){}
+)
+
+*
+const pr = new Promise((resolve, reject)=> {
+    setTimeout(()=>{
+        resolve('OK')
+    }, 3000)
+});
+
+pr.then(
+    function(result){},
+).catch(
+    function(err){}
+).finally(
+    function(){
+        console.log('----주문 끝---')
+    }
+)
+
+*
+const f1 = () => {
+    return new Promise((res, rej) => {
+        setTimeout(()=> {
+            res("1번 주문 완료");
+        }, 1000);
+    });
+};
+
+const f2 = (message) => { 
+    console.log(message);
+    return new Promise((res, rej) => {
+        setTimeout(()=> {
+            rej("xxx");
+        }, 3000);
+    });
+};
+
+const f3 = (message) => { 
+    console.log(message);
+    return new Promise((res, rej) => {
+        setTimeout(()=> {
+            res("3번 주문 완료");
+        }, 2000);
+    });
+};
+
+// 프로미스 체이닝(Promises chaining)
+console.time('x');
+console.log("시작");
+f1()
+    .then((res) => f2(res))
+    .then((res) => f3(res))
+    .then((res) => console.log(res))
+    .catch(console.log)
+    .finally(()=> {
+        console.log("끝");
+    });
+
+//Promise.all
+Promise.all([f1(), f2(), f3()]).then((res)=> {
+    console.log(res);
+    console.timeEnd('x');
+});
+
+
+*/
+
