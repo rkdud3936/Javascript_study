@@ -1,0 +1,46 @@
+/*
+배열 메소드2 (sort, reduce)
+-arr.sort()
+배열 재정렬
+주의! 배열 자체가 변경되니 주의
+인수로 정렬 로직을 담은 함수를 받음
+
+(1)
+let arr = [1,5,4,2,3];
+arr.sort();
+console.log(arr); //[1,2,3,4,5]
+(2)
+let arr = [27, 8, 5, 13];
+arr.sort((a, b) => {
+    return a-b
+});
+console.log(arr); // [13, 27, 5, 8]
+
+-arr.reduce()
+인수로 함수를 받음
+(누적 계산값, 현재값) = > {return 계산값};
+
+**배열의 모든 수 합치기**
+(1)  
+let arr = [1,2,3,4,5];
+// for, for of, forEach
+
+let result = 0;
+arr.forEach(num => {
+    result += num;
+});
+
+console.log(result); // 15
+
+(2) arr.reduce사용
+let arr = [1,2,3,4,5];
+
+const result = arr.reduce((prev, cur) => {
+    return prev + cur;
+}, 0)
+
+console.log(result); // 15
+
+
+*/
+ 
