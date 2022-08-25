@@ -1,0 +1,60 @@
+/*
+1.
+클로저(Closure)
+함수와 렉시컬 환경의 조합
+함수가 생성될 당시의 외부 변수를 기억
+생성 이후에도 계속 접근 가능 
+
+
+-어휘적 환경(Lexical Environment)
+let one;
+one = 1;
+
+function addOne(num){
+    console.log(one + num);
+}
+
+addOne(5);
+
+2. setTimeout : 일정 시간이 지난 후 함수를 실행 
+   setInterval : 일정 시간 간격으로 함수를 반복
+
+-setTimeout
+(1-1)
+function fn(){
+    console.log(3)
+}
+
+setTimeout(fn, 3000);
+
+(1-2) 위 코드랑 같은내용
+setTimeout(function(){console.log(3)
+}, 3000);
+
+(2)
+const tId = function showName(name){
+                console.log(name);
+            }
+            setTimeout(showName, 3000, 'Mike');
+clareTimeout(tId); // 끝냄. 아무일도 일어나지않음
+
+-setInterval: __초 마다 반복. 끝내려면 clearInterval(tId)
+(1)
+function showName(name){
+    console.log(name);
+}
+
+const tId = setInterval(showName, 3000, 'Mike');
+
+(2)
+let num = 0;
+function showName(){
+    console.log(`안녕하세요. 접속하신지 ${num++}초가 지났습니다.`);
+    if (num > 5){
+        clearInterval(tid);
+    }
+}
+
+setInterval(showName, 1000);
+
+*/
